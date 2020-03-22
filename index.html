@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap">
+	<link rel="stylesheet" href="style.css">
+	<title>Ideas</title>
+</head>
+<body>
+	<div class="modal">
+		<div class="modal-content">
+			<input maxlength="35" class="modal-title" placeholder="Title" type="text">
+			<textarea class="modal-text" placeholder="Write your ideas. . ." rows="3"></textarea>
+			<span class="btn modal-close-button">Save</span>
+		</div>
+	</div>
+	<div class="container">
+		<header class="header">
+			<img class="header-logo" src="img/keep.svg" alt="light bulb">
+			<h1 class="header-title">ideas</h1>
+		</header>
+		<div class="form-container">
+			<form class="form" id="form" autocomplete="off">
+				<input maxlength="35" class="note" id="note-title" placeholder="Title" type="text">
+				<textarea class="note" id="note-text" placeholder="Write your ideas. . ." oninput="autoGrow(this)" rows="1" autofocus></textarea>
+				<div class="form-buttons">
+					<button class="btn btn-submit" type="submit" id="submit-button">Submit</button>
+					<button class="btn btn-close" type="button" id="form-close-button">Close</button>
+				</div>
+			</form>
+		</div>
+		<div id="notes" aria-multiline="true"></div>
+		<div class="main">
+			<img class="main-logo" src="img/idea.svg" alt="idea">
+			<h2 class="main-title">Ideas you add appear here</h2>
+		</div>
+		<div class="color-picker">
+			<div class="clr" data-color="#fff" id="white"></div>
+			<div class="clr" data-color="#d7aefb" id="purple"></div>
+			<div class="clr" data-color="#F4F0A4" id="orange"></div>
+			<div class="clr" data-color="#a7ffeb" id="teal"></div>
+		</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
